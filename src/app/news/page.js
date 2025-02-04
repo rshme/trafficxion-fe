@@ -10,7 +10,7 @@ const Page = ({ searchParams }) => {
   const [locationId, setLocationId] = useState(null);
   const result = React.use(searchParams);
   useEffect(() => {
-    setCity(result.suburb);
+    setCity(result.city);
     setLocationId(result.locationId);
   }, [result]);
 
