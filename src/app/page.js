@@ -46,11 +46,12 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let city = data?.address?.city || "";
+    let city = data?.address?.suburb || "";
     setLocationId(
       location.filter((x) => x.slug == city.replace(" ", "-").toLowerCase())[0]
         ?.id
     );
+
   }, [data]);
 
   return (
