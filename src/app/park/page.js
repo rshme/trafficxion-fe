@@ -59,7 +59,7 @@ const Page = ({ searchParams }) => {
   const [activeTab, setActiveTab] = useState("car");
   const result = React.use(searchParams);
   useEffect(() => {
-    setCity(result.city);
+    setCity(result.suburb);
     setLocationId(result.locationId);
   }, [result]);
 

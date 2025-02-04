@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <>
       {data ? (
-        <Header content={"Kamu Berada di "} city={data?.address?.city} />
+        <Header content={"Kamu Berada di "} city={data?.address?.suburb} />
       ) : null}
       {userLocation ? <OpenStreetMap position={userLocation} /> : null}
       <div className="section2 d-flex justify-content-between align-content-center mt-5">
@@ -65,7 +65,7 @@ export default function Home() {
           <strong>
             Berita Lalu Lintas Hangat di <br />
             {data ? (
-              <em className="text-primary">{data?.address?.city}</em>
+              <em className="text-primary">{data?.address?.suburb}</em>
             ) : null}
           </strong>
         </p>
@@ -76,7 +76,7 @@ export default function Home() {
             type="button"
             onClick={() =>
               router.push(
-                `/news?city=${data?.address?.city}&locationId=${locationId}`
+                `/news?city=${data?.address?.suburb}&locationId=${locationId}`
               )
             }
           >
@@ -109,7 +109,7 @@ export default function Home() {
           <strong>
             Area Parkir Terdekat di <br />
             {data ? (
-              <em className="text-primary">{data?.address?.city}</em>
+              <em className="text-primary">{data?.address?.suburb}</em>
             ) : null}
           </strong>
         </p>
@@ -120,7 +120,7 @@ export default function Home() {
             type="button"
             onClick={() =>
               router.push(
-                `/park?city=${data?.address?.city}&locationId=${locationId}`
+                `/park?city=${data?.address?.suburb}&locationId=${locationId}`
               )
             }
           >
